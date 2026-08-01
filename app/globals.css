@@ -117,8 +117,6 @@ ul { padding: 0; margin: 0; list-style: none; }
 .hero-scope { display: flex; flex-wrap: wrap; gap: 12px 27px; margin-top: 72px; color: #b4d3e3; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .hero-scope span { display: flex; align-items: center; gap: 9px; }
 .hero-scope span::before { width: 4px; height: 4px; content: ""; border-radius: 50%; background: #72c9ef; }
-.hero-reference { justify-self: end; align-self: end; margin: 0 0 13px; color: rgba(221, 242, 251, .72); font-size: 10px; font-weight: 800; letter-spacing: .16em; line-height: 1.55; text-align: right; }
-.hero-reference strong { font-size: 70px; font-weight: 300; letter-spacing: -.08em; line-height: .85; }
 
 .about { padding: 126px 0 116px; background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 70%, #f3f8fb 70%); }
 .about-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(64px, 11vw, 160px); align-items: start; }
@@ -226,6 +224,35 @@ ul { padding: 0; margin: 0; list-style: none; }
 .contact address span { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .contact address strong { color: var(--navy); font-size: 15px; }
 
+.privacy-main { background: #f7fafc; }
+.privacy-article { width: min(calc(100% - 48px), 820px); margin: 0 auto; padding: 104px 0 116px; }
+.privacy-hero { padding-bottom: 54px; border-bottom: 1px solid var(--line); }
+.privacy-hero h1 { max-width: 760px; margin-bottom: 15px; color: var(--navy); font-size: clamp(42px, 5.4vw, 64px); }
+.privacy-updated { margin-bottom: 34px; color: var(--muted); font-size: 14px; font-weight: 700; }
+.privacy-hero > p:not(.eyebrow):not(.privacy-updated) { max-width: 760px; margin-bottom: 16px; color: #465f72; font-size: 16px; }
+.privacy-hero .privacy-lead { max-width: 690px; margin-bottom: 28px; color: var(--ink); font-size: 20px; line-height: 1.55; }
+.privacy-article a { color: #076da9; text-decoration: underline; text-decoration-color: #a7d4e9; text-underline-offset: 3px; }
+.privacy-article a:hover, .privacy-article a:focus-visible { color: var(--navy); text-decoration-color: var(--blue); }
+.privacy-index { margin: 43px 0 10px; padding: 24px 27px; border-top: 3px solid #76c6e8; background: white; }
+.privacy-index > p { margin: 0 0 16px; color: var(--navy); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.privacy-index ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 30px; margin: 0; padding: 0; list-style: none; }
+.privacy-index li a { display: flex; gap: 10px; color: #476378; font-size: 13px; line-height: 1.45; text-decoration: none; }
+.privacy-index li a:hover, .privacy-index li a:focus-visible { color: var(--blue); }
+.privacy-index li span { flex: 0 0 auto; color: #63b8df; font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+.privacy-section { padding: 47px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 104px; }
+.privacy-section h2 { display: flex; align-items: baseline; gap: 15px; max-width: none; margin-bottom: 25px; color: var(--navy); font-size: clamp(27px, 3.1vw, 36px); }
+.privacy-section h2 > span { color: #65b9df; font-size: 12px; font-weight: 800; letter-spacing: .1em; }
+.privacy-section-content { max-width: 780px; }
+.privacy-section p { margin-bottom: 16px; color: #455f72; font-size: 16px; line-height: 1.72; }
+.privacy-section p:last-child { margin-bottom: 0; }
+.privacy-section ul { display: grid; gap: 8px; margin: 0 0 18px; }
+.privacy-section li { position: relative; padding-left: 19px; color: #455f72; font-size: 16px; line-height: 1.62; }
+.privacy-section li::before { position: absolute; top: .78em; left: 0; width: 6px; height: 6px; content: ""; border-radius: 50%; background: #6abce1; }
+.privacy-details { display: grid; gap: 0; margin: 0 0 21px; border-top: 1px solid var(--line); }
+.privacy-details > div { display: grid; grid-template-columns: minmax(145px, .34fr) minmax(0, 1fr); gap: 20px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.privacy-details dt { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.privacy-details dd { margin: 0; color: var(--ink); font-size: 15px; }
+
 .site-footer { padding-top: 63px; background: #062545; color: white; }
 .footer-grid { display: grid; grid-template-columns: 1.35fr .65fr .9fr; gap: 69px; padding-bottom: 54px; }
 .footer-grid > div:first-child img { display: block; width: 128px; height: auto; margin-bottom: 20px; filter: brightness(0) invert(1); }
@@ -234,7 +261,14 @@ ul { padding: 0; margin: 0; list-style: none; }
 .footer-nav p { margin: 0 0 7px; color: #78cbed; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .footer-nav a:hover, .footer-nav a:focus-visible { color: white; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding: 21px 0; border-top: 1px solid rgba(178, 215, 232, .2); color: #a4bfce; font-size: 11px; }
+.footer-privacy-link { color: #c4dce8; }
+.footer-privacy-link:hover, .footer-privacy-link:focus-visible { color: white; }
+.privacy-footer-grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); }
+.privacy-footer-grid > div:first-child p:first-of-type { margin-bottom: 8px; color: white; font-size: 14px; font-weight: 800; }
+.privacy-footer-bottom { display: grid; grid-template-columns: 1fr auto; align-items: start; }
+.privacy-footer-bottom .footer-privacy-link { grid-column: 1 / -1; justify-self: start; }
 .whatsapp-float { position: fixed; z-index: 10; right: 25px; bottom: 25px; display: grid; width: 51px; height: 51px; place-items: center; border: 2px solid white; border-radius: 50%; background: #19a96b; box-shadow: 0 7px 20px rgba(0, 39, 69, .25); color: white; font-size: 12px; font-weight: 900; letter-spacing: -.05em; }
+.whatsapp-icon { width: 27px; height: 27px; fill: currentColor; }
 .whatsapp-float:hover, .whatsapp-float:focus-visible { background: #118b56; transform: translateY(-2px); }
 
 @media (max-width: 880px) {
@@ -252,7 +286,6 @@ ul { padding: 0; margin: 0; list-style: none; }
   .hero, .hero-grid { min-height: 620px; }
   .hero-grid { grid-template-columns: 1fr; padding: 75px 0 51px; }
   .hero-overlay { background: linear-gradient(90deg, rgba(3, 25, 50, .97), rgba(4, 31, 60, .86) 65%, rgba(5, 33, 61, .58)); }
-  .hero-reference { display: none; }
   .about { background: white; }
   .about-grid, .water-layout, .chemistry-layout, .equipment-grid, .maintenance-grid, .differential-grid, .contact-grid { grid-template-columns: 1fr; gap: 44px; }
   .solution-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -266,6 +299,8 @@ ul { padding: 0; margin: 0; list-style: none; }
   .equipment-photo { min-height: 390px; }
   .supply-layout { grid-template-columns: 1fr; }
   .supply-photo { min-height: 380px; }
+  .privacy-article { width: min(calc(100% - 36px), 820px); padding: 80px 0; }
+  .privacy-footer-grid { grid-template-columns: 1.3fr .7fr; }
   .maintenance-grid { gap: 42px; }
   .commercial-cta-inner { display: grid; gap: 32px; }
   .contact-grid { gap: 40px; }
@@ -308,6 +343,17 @@ ul { padding: 0; margin: 0; list-style: none; }
   .cta-actions { min-width: 0; align-items: flex-start; flex-direction: column; gap: 19px; }
   .contact address a { grid-template-columns: 1fr 18px; gap: 4px; padding: 17px 0; }
   .contact address span { grid-column: 1 / -1; }
+  .privacy-article { width: min(calc(100% - 32px), 820px); padding: 66px 0 74px; }
+  .privacy-hero { padding-bottom: 41px; }
+  .privacy-hero .privacy-lead { font-size: 18px; }
+  .privacy-index { margin-top: 30px; padding: 20px; }
+  .privacy-index ol { grid-template-columns: 1fr; gap: 10px; }
+  .privacy-section { padding: 36px 0; }
+  .privacy-section h2 { align-items: flex-start; gap: 11px; font-size: 28px; }
+  .privacy-section p, .privacy-section li { font-size: 15px; }
+  .privacy-details > div { grid-template-columns: 1fr; gap: 3px; padding: 12px 0; }
+  .privacy-footer-grid { grid-template-columns: 1fr; }
+  .privacy-footer-bottom { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 31px; }
   .footer-grid > div:first-child { grid-column: auto; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }

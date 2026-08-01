@@ -69,7 +69,6 @@ export default function Home() {
                 <span>Equipamentos</span>
               </div>
             </div>
-            <p className="hero-reference" aria-hidden="true">SOLUÇÕES E SERVIÇOS<br /><strong>01</strong></p>
           </div>
         </section>
 
@@ -221,7 +220,7 @@ export default function Home() {
           <div className="shell contact-grid">
             <div><SectionHeading eyebrow="Contato" title="Fale com a Araça Cloro." /><p id="contact-title" className="section-description">Utilize o canal mais conveniente para apresentar a sua necessidade.</p></div>
             <address>
-              <a href={whatsappLink} target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>{contact.whatsappDisplay}</strong><Arrow /></a>
+              <a href={whatsappLink} target="_blank" rel="noreferrer"><span>TELEFONE<br />WHATSAPP</span><strong>{contact.whatsappDisplay}</strong><Arrow /></a>
               <a href={`mailto:${contact.email}`}><span>E-mail</span><strong>{contact.email}</strong><Arrow /></a>
               <a href="https://www.google.com/maps/search/?api=1&query=Rua+Anhanguera,+485,+Araçatuba,+SP" target="_blank" rel="noreferrer"><span>Endereço</span><strong>{contact.address}</strong><Arrow /></a>
             </address>
@@ -232,11 +231,15 @@ export default function Home() {
         <div className="shell footer-grid">
           <div><Image src="/logo-araca-cloro.png" alt="Araça Cloro Soluções e Serviços" width={500} height={500} /><p>Soluções químicas, tratamento de águas, equipamentos e suporte técnico para múltiplos segmentos.</p></div>
           <div className="footer-nav"><p>Institucional</p>{navigation.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}</div>
-          <div className="footer-nav"><p>Contato</p><a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp</a><a href={`mailto:${contact.email}`}>{contact.email}</a><span>{contact.address}</span></div>
+          <div className="footer-nav"><p>Contato</p><a href={whatsappLink} target="_blank" rel="noreferrer">{contact.whatsappDisplay}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><span>{contact.address}</span></div>
         </div>
-        <div className="shell footer-bottom"><span>© {new Date().getFullYear()} Araça Cloro Soluções e Serviços.</span><span>Política de privacidade [em preparação]</span></div>
+        <div className="shell footer-bottom"><span>© {new Date().getFullYear()} Araça Cloro Soluções e Serviços.</span><a className="footer-privacy-link" href="/politica-de-privacidade/">Política de Privacidade</a></div>
       </footer>
-      <a className="whatsapp-float" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Araça Cloro pelo WhatsApp">WA</a>
+      <a className="whatsapp-float" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Araça Cloro pelo WhatsApp">
+        <svg className="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 3.5a12.5 12.5 0 0 0-10.7 19L3.7 28.5l6.2-1.6A12.5 12.5 0 1 0 16 3.5Zm0 22.7a10.2 10.2 0 0 1-5.2-1.4l-.4-.2-3.7 1 .9-3.6-.2-.4A10.2 10.2 0 1 1 16 26.2Zm5.6-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.4 5.4 4.8.8.3 1.4.5 1.9.6.8.2 1.6.2 2.2.1.7-.1 1.8-.7 2.1-1.3.3-.6.3-1.2.2-1.3-.1-.1-.3-.2-.6-.4Z" />
+        </svg>
+      </a>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
     </>
   );

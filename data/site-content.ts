@@ -45,7 +45,7 @@ export const solutions = [
   },
   {
     number: "05",
-    title: "Manutenção industrial e automotiva",
+    title: "Químicos para manutenção industrial e automotiva",
     description:
       "Produtos de limpeza para rotinas industriais, máquinas agrícolas, caminhões, carros e camionetes.",
     examples: ["Desengraxantes", "Limpadores", "Detergentes", "Limpa inox"],
