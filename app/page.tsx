@@ -39,9 +39,18 @@ export default function Home() {
       <Header />
       <main>
         <section className="hero" id="inicio" aria-labelledby="hero-title">
+          <Image
+            className="hero-photo"
+            src="/images/hero-treatment-facility.png"
+            alt="Instalação industrial de tratamento de águas com tanques e tubulações em aço inoxidável"
+            fill
+            priority
+            sizes="100vw"
+          />
+          <div className="hero-overlay" aria-hidden="true" />
           <div className="shell hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow eyebrow--light">Araça Cloro Soluções e Serviços</p>
+              <p className="eyebrow eyebrow--light"><span aria-hidden="true" /> Araça Cloro Soluções e Serviços</p>
               <h1 id="hero-title">Soluções químicas para a continuidade da sua operação.</h1>
               <p className="hero-description">
                 Produtos químicos, tratamento de águas, equipamentos, insumos e suporte técnico para processos industriais.
@@ -54,18 +63,13 @@ export default function Home() {
                   Conhecer soluções <Arrow />
                 </a>
               </div>
+              <div className="hero-scope" aria-label="Frentes de atuação">
+                <span>Processos industriais</span>
+                <span>Tratamento de águas</span>
+                <span>Equipamentos</span>
+              </div>
             </div>
-            <div className="hero-visual" aria-label="Composição visual inspirada em processos de tratamento e dosagem industrial" role="img">
-              <div className="visual-glow" />
-              <div className="visual-grid" />
-              <div className="visual-panel visual-panel--top"><span>PROCESSOS</span><strong>01</strong></div>
-              <div className="visual-vessel visual-vessel--one"><i /><i /><i /></div>
-              <div className="visual-vessel visual-vessel--two"><i /><i /><i /></div>
-              <div className="visual-line visual-line--one" />
-              <div className="visual-line visual-line--two" />
-              <div className="visual-panel visual-panel--bottom"><span>SUPORTE TÉCNICO</span><strong>02</strong></div>
-              <p>QUÍMICOS · ÁGUAS · EQUIPAMENTOS</p>
-            </div>
+            <p className="hero-reference" aria-hidden="true">SOLUÇÕES E SERVIÇOS<br /><strong>01</strong></p>
           </div>
         </section>
 
@@ -138,12 +142,15 @@ export default function Home() {
 
         <section className="section equipment" aria-labelledby="equipment-title">
           <div className="shell equipment-grid">
-            <div className="equipment-graphic" aria-hidden="true">
-              <div className="graphic-column graphic-column--one" />
-              <div className="graphic-column graphic-column--two" />
-              <div className="graphic-pipe" />
-              <span>EQ</span>
-            </div>
+            <figure className="equipment-photo">
+              <Image
+                src="/images/lab-water-analysis.png"
+                alt="Laboratório técnico com amostras de água e componentes de equipamentos para tratamento"
+                fill
+                sizes="(max-width: 880px) 100vw, 48vw"
+              />
+              <figcaption>Equipamentos, análises e suporte técnico</figcaption>
+            </figure>
             <div className="equipment-copy">
               <SectionHeading eyebrow="Equipamentos e serviços" title="Estrutura para aplicar, monitorar e evoluir." />
               <div className="two-column-list" id="equipment-title">
