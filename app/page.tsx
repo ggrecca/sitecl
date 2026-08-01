@@ -41,7 +41,7 @@ export default function Home() {
         <section className="hero" id="inicio" aria-labelledby="hero-title">
           <Image
             className="hero-photo"
-            src="/images/hero-treatment-facility.png"
+            src="/images/hero-treatment-facility.webp"
             alt="Instalação industrial de tratamento de águas com tanques e tubulações em aço inoxidável"
             fill
             priority
@@ -109,7 +109,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section water" aria-labelledby="water-title">
+        <section className="section water" id="aguas" aria-labelledby="water-title">
           <div className="shell water-layout">
             <div className="water-intro">
               <SectionHeading eyebrow="Tratamento de águas" title="Apoio técnico para utilidades e processos." />
@@ -117,6 +117,15 @@ export default function Home() {
               <a className="button button--outline" href={whatsappLink} target="_blank" rel="noreferrer">Converse sobre sua aplicação <Arrow /></a>
             </div>
             <div className="water-grid">
+              <figure className="water-photo">
+                <Image
+                  src="/images/water-treatment-reverse-osmosis.webp"
+                  alt="Sistema industrial de tratamento de águas com tanques, tubulações e unidade de osmose reversa"
+                  fill
+                  sizes="(max-width: 880px) 100vw, 56vw"
+                />
+                <figcaption>Tratamento de águas e efluentes · Osmose reversa</figcaption>
+              </figure>
               {waterApplications.map((application, index) => (
                 <article className="water-card" key={application.title}>
                   <span>0{index + 1}</span>
@@ -144,7 +153,7 @@ export default function Home() {
           <div className="shell equipment-grid">
             <figure className="equipment-photo">
               <Image
-                src="/images/lab-water-analysis.png"
+                src="/images/lab-water-analysis.webp"
                 alt="Laboratório técnico com amostras de água e componentes de equipamentos para tratamento"
                 fill
                 sizes="(max-width: 880px) 100vw, 48vw"
@@ -182,7 +191,18 @@ export default function Home() {
         <section className="section supply" id="diferenciais" aria-labelledby="supply-title">
           <div className="shell">
             <SectionHeading eyebrow="Fornecimento e diferenciais" title="Fornecimento alinhado ao porte e à rotina da operação." description="Atendimento pontual, recorrente ou estruturado conforme criticidade e consumo." />
-            <div className="supply-cards" id="supply-title">{supplyCards.map((item) => <article key={item.label}><strong>{item.label}</strong><span>{item.detail}</span></article>)}</div>
+            <div className="supply-layout">
+              <figure className="supply-photo">
+                <Image
+                  src="/images/chemical-supply-logistics.webp"
+                  alt="Estrutura industrial de fornecimento com caminhão-tanque e contêineres IBC em área protegida"
+                  fill
+                  sizes="(max-width: 880px) 100vw, 48vw"
+                />
+                <figcaption>Embalagens e fornecimento a granel</figcaption>
+              </figure>
+              <div className="supply-cards" id="supply-title">{supplyCards.map((item) => <article key={item.label}><strong>{item.label}</strong><span>{item.detail}</span></article>)}</div>
+            </div>
             <div className="differential-grid">
               <div><p className="eyebrow">Diferenciais comerciais</p><h3>Produto, aplicação e apoio técnico em uma conversa objetiva.</h3></div>
               <ul>{differentials.map((item) => <li key={item}>{item}</li>)}</ul>
