@@ -1,7 +1,7 @@
 export const contact = {
   whatsapp: "5518996215929",
   whatsappDisplay: "(18) 99621-5929",
-  email: "aracacloro@outlook.com.br",
+  email: "vendas@aracacloro.com.br",
   address: "Rua Anhanguera, 485 - Araçatuba - SP",
 };
 
